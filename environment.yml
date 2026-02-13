@@ -1,0 +1,15 @@
+name: mcp-email
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - mcp[cli]
+    - langchain-google-genai
+    - langchain-mcp-adapters
+    - langgraph
+    - gradio
+    - python-dotenv
+    - langchain
