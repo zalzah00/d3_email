@@ -12,6 +12,11 @@ load_dotenv()
 mcp = FastMCP("EmailTools")
 
 @mcp.tool()
+def reverse_word(word: str) -> str:
+    """Reverses the characters in a word."""
+    return word[::-1]
+
+@mcp.tool()
 def send_email(recipient: str, subject: str, body: str) -> str:
     """Sends an email with a custom subject and body."""
     sender = os.getenv("SENDER_EMAIL")
